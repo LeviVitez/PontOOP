@@ -16,10 +16,20 @@ public class Main {
 
         Pont[] pontok = new Pont[10];
         for (int i = 0; i <pontok.length ; i++) {
-            pontok[i]=new Pont(100);
+            pontok[i]=new Pont(10);
         }
         for (Pont p: pontok) {
             System.out.println(p);
         }
+
+        //Origotól legtávolabb eső pont
+        int LegtavolabbiPontIndex=0;
+        for (int i = 1; i < pontok.length ; i++) {
+            if (pontok[LegtavolabbiPontIndex].getOrigotolMertTavolsag()<pontok[i].getOrigotolMertTavolsag()){
+                LegtavolabbiPontIndex=i;
+            }
+        }
+        System.out.printf("A legtávolabbi pont az Origótól a(z) %d. pont, koordinátái: %s, Origótól mért távolságra: %.3f"
+                ,(LegtavolabbiPontIndex+1),pontok[LegtavolabbiPontIndex],pontok[LegtavolabbiPontIndex].getOrigotolMertTavolsag());
     }
 }
