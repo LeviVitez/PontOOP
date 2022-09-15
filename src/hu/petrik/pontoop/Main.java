@@ -31,5 +31,12 @@ public class Main {
         }
         System.out.printf("A legtávolabbi pont az Origótól a(z) %d. pont, koordinátái: %s, Origótól mért távolságra: %.3f"
                 ,(LegtavolabbiPontIndex+1),pontok[LegtavolabbiPontIndex],pontok[LegtavolabbiPontIndex].getOrigotolMertTavolsag());
+
+        System.out.printf("Az eggyik pont: %s, a másik pont %s , a két pont távolsága: %.3f\n",p3,p4,p3.getTavolsag(p4));
+
+        System.out.printf("A %s pont elhelyezkedése: %s\n",p3,p3.getSiknegyedSzoveges());
+        System.out.printf("A %s pont elhelyezkedése: %s\n",p3,p2.getSiknegyedSzoveges());
+        System.out.printf("A %s pont elhelyezkedése: %s\n",p4,p4.getSiknegyedSzoveges());
+
     }
 }
