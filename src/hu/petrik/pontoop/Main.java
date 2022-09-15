@@ -9,5 +9,7 @@ public class Main {
         Pont p3=new Pont(3,4);
 
         System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
     }
 }
