@@ -1,6 +1,7 @@
 package hu.petrik.pontoop;
 
 import hu.petrik.pontoop.pont.Pont;
+import hu.petrik.pontoop.kor.Kor;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +39,33 @@ public class Main {
         System.out.printf("A %s pont elhelyezkedése: %s\n",p3,p2.getSiknegyedSzoveges());
         System.out.printf("A %s pont elhelyezkedése: %s\n",p4,p4.getSiknegyedSzoveges());
 
+
+        System.out.println("Kör feladat: ");
+
+
+        Kor kör = new Kor(5 , 6 ,4);
+        System.out.println("Kör kerülete: "+Kor.getkerulet(kör.getRadius()));
+        System.out.println("Kör területe: "+Kor.getterulet(kör.getRadius()));
+        System.out.println("Nagyobb kör: "+ kör.getX() + " " + kör.getY() + " " + Kor.getnagyitas(kör.getRadius(), 2));
+        System.out.println("Eredeti kör: "+ kör);
+
+        Kor[] korok = new Kor[10];
+        for (int i = 0; i < korok.length ; i++) {
+            korok[i] = new Kor(10 ,15);
+        }
+        for (Kor kor : korok) {
+            System.out.println(kor);
+        }
+
+        int legnagyobbterulet = 0;
+        for (int i = 0; i < korok.length; i++) {
+
+            if (Kor.getterulet(korok[i].getRadius()) > Kor.getterulet(korok[legnagyobbterulet].getRadius()) ){
+                legnagyobbterulet = i;
+            }
+        }
+        System.out.println("A legnagyobb területü kör : " + korok[legnagyobbterulet]);
+
+        }
+
     }
-}
