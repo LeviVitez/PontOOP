@@ -4,22 +4,22 @@ public class Kor {
 
     private int x;
     private int y;
-    private int sugar;
+    private int radius;
 
     public Kor(int x, int y, int sugar) {
         this.x = x;
         this.y = y;
-        this.sugar = sugar;
+        this.radius = sugar;
     }
     public  Kor(int n , int j){
 
-        this.x = kordinateGenerate(n);
-        this.y = kordinateGenerate(n);
-        this.sugar = radiusGenerate(j);
+        this.x = kordinátagenerálás(n);
+        this.y = kordinátagenerálás(n);
+        this.radius = sugárgenerálás(j);
     }
 
     public int getRadius() {
-        return sugar;
+        return radius;
     }
 
     public int getX() {
@@ -30,10 +30,10 @@ public class Kor {
         return y;
     }
 
-    private int kordinateGenerate(int n) {
+    private int kordinátagenerálás(int n) {
         return (int)(Math.random() * ( 2 * n ) + 1) - n;
     }
-    private int radiusGenerate(int n) {
+    private int sugárgenerálás(int n) {
         return (int)(Math.random() * ( 2 * n ) + 1) - n;
     }
 
@@ -54,7 +54,7 @@ public class Kor {
         return "Kor{" +
                 "x=" + x +
                 ", y=" + y +
-                ", sugar=" + sugar +
+                ", sugar=" + radius +
                 '}';
     }
 }
